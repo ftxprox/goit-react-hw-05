@@ -7,8 +7,10 @@
     border-radius: 8px;
     margin: 20px 0;
 }
-
-
+.overview{
+    font-style: oblique;
+    font-size: 18px;
+}
 .backLink {
     display: inline-block;
     cursor: pointer;
@@ -35,11 +37,22 @@
     margin-top: 20px;
 }
 
-.additional a {
+
+.button {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
     text-decoration: none;
-    color: black;
+    padding: 10px 25px;
+    color: #ffffff;
+    border-radius: 12px;
+    background: #0aad5e;
+    border: 2px solid #354251;
 }
 
-.additional a:hover {
-    color: black;
+.button:hover {
+    background: #0b894c;
+    color: #354251;
+    border: 2px solid #354251;
+    transition: all 0.8s ease;
 }

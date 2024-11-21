@@ -47,7 +47,7 @@ const MovieDetailsPage = () => {
         Go back
       </button>
       <h1>{movie.title || "No title available"}</h1>
-      <p>{movie.overview || "No overview available."}</p>
+      <p className={s.overview}>{movie.overview || "No overview available."}</p>
       <img
         src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : "/placeholder.jpg"}
         alt={movie.title || "Poster not available"}
@@ -55,10 +55,10 @@ const MovieDetailsPage = () => {
       />
       <div className={s.additional}>
         <Link to="cast" state={{ from: location.state?.from || "/" }}>
-          Cast
+          <button className={s.button}>Cast</button>
         </Link>
         <Link to="reviews" state={{ from: location.state?.from || "/" }}>
-          Reviews
+          <button className={s.button}>Reviews</button>
         </Link>
       </div>
 

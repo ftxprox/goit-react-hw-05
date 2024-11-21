@@ -3,11 +3,12 @@
 }
 
 .item {
+    font-style: oblique;
     margin-bottom: 20px;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #aca6a6;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9af;
 }
 
 .author {
