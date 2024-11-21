@@ -1,0 +1,45 @@
+.container {
+    padding: 20px;
+}
+
+.poster {
+    width: 300px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+
+.backLink {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 10-px;
+    text-decoration: none;
+    padding: 10px 25px;
+    color: #ffffff;
+    border-radius: 12px;
+    background: #0aad5e;
+    border: 2px solid #354251;
+}
+
+.backLink:hover {
+    background: #0b894c;
+    color: #354251;
+    border: 2px solid #354251;
+    transition: all 0.8s ease;
+}
+
+.additional {
+    color: black;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.additional a {
+    text-decoration: none;
+    color: black;
+}
+
+.additional a:hover {
+    color: black;
+}
