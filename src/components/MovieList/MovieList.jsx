@@ -18,7 +18,7 @@ const MovieList = ({ movies }) => {
         <li key={id} className={s.listItem}>
           <Link
             to={`/movies/${id}`}
-            state={{ from: location.pathname }}
+            state={{ from: location }}
             className={s.movieLink}
           >
             {poster_path ? (

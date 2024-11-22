@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useState } from "react";
-import { useParams, Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { useParams, Link, Outlet, useLocation, } from "react-router-dom";
 import axios from "axios";
 import s from "./MovieDetailsPage.module.css";
 import Loader from "../../components/Loader/Loader";
@@ -10,7 +10,6 @@ const API_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZjJmNGI0OTAwNzYwYmQyYjlmNWNi
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const location = useLocation();
-  const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
 
@@ -34,18 +33,14 @@ const MovieDetailsPage = () => {
     fetchMovieDetails();
   }, [movieId]);
 
-  const handleGoBack = () => {
-    navigate(location.state?.from || "/", { replace: true });
-  };
-
   if (error) return <p className={s.error}>{error}</p>;
   if (!movie) return <Loader />;
 
   return (
     <div className={s.container}>
-      <button onClick={handleGoBack} className={s.backLink}>
+      <Link to={location.state?.from || "/"} className={s.backLink}>
         Go back
-      </button>
+      </Link>
       <h1>{movie.title || "No title available"}</h1>
       <p className={s.overview}>{movie.overview || "No overview available."}</p>
       <img
